@@ -11,25 +11,25 @@ import java.util.ArrayList;
  * @author Ram
  */
 public class ViewP {
-    private ArrayList<Hw> person;
+    private ArrayList<allPerson> person;
     public ViewP(){
-        this.person = new ArrayList<Hw>();
+        this.person = new ArrayList<>();
     }
 
-    public ArrayList<Hw> getP() {
+    public ArrayList<allPerson> getP() {
         return person;
     }
 
-    public void setP(ArrayList<Hw> deets) {
-        this.person = deets;
+    public void setP(ArrayList<allPerson> person) {
+        this.person = person;
     }
-    public Hw addNewP(){
-        Hw newdeets = new Hw();
+    public allPerson addNewP(){
+        allPerson newdeets = new allPerson();
         person.add(newdeets);
         return newdeets;
         
     }
-    public void deleteP(Hw d){
+    public void deleteP(allPerson d){
         person.remove(d);
     }
     

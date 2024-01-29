@@ -4,7 +4,7 @@
  */
 package Ui;
 
-import homework.Hw;
+import homework.allPerson;
 import homework.ViewP;
 import javax.swing.JOptionPane;
 
@@ -19,9 +19,13 @@ public class CP extends javax.swing.JPanel {
      */
         ViewP person;
 
+    /**
+     *
+     * @param person
+     */
     public CP(ViewP person) {
         initComponents();
-        this.person = new ViewP();
+        this.person = person;
 
         
 
@@ -140,10 +144,10 @@ public class CP extends javax.swing.JPanel {
         String Fname=FName.getText();
         String Lname=LName.getText();
         String sex=Sex.getText();
-        int age=Integer.parseInt(Age.getText());
+        String age=Age.getText();
         String bloodgrp=BG.getText();
         
-        Hw d = person.addNewP();
+        allPerson d = person.addNewP();
         d.setFirstName(Fname);
         d.setAge(age);
         d.setLastName(Lname);

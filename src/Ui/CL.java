@@ -4,7 +4,7 @@
  */
 package Ui;
 
-import homework.Hw;
+import homework.allPerson;
 import homework.ViewL;
 import javax.swing.JOptionPane;
 
@@ -18,9 +18,14 @@ public class CL extends javax.swing.JPanel {
      * Creates new form CL
      */
     ViewL localaddress;
+
+    /**
+     *
+     * @param localaddress
+     */
     public CL(ViewL localaddress) {
         initComponents();
-        this.localaddress = new ViewL();
+        this.localaddress = localaddress;
 
     }
 
@@ -187,10 +192,10 @@ public class CL extends javax.swing.JPanel {
         String streetname=LStreetName.getText();
         String door=LDoorNo.getText();
         String state=LState.getText();
-        int pin=Integer.parseInt(LPIN.getText());
+        String pin=LPIN.getText();
         String city=LCity.getText();
         
-        Hw d = localaddress.addNewL();
+        allPerson d = localaddress.addNewL();
         d.setLStreetName(streetname);
         d.setLState(state);
         d.setLUnit(door);

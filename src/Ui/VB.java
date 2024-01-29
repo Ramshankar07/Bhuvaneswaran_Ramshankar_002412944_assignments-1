@@ -4,7 +4,7 @@
  */
 package Ui;
 
-import homework.Hw;
+import homework.allPerson;
 import homework.ViewB;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -181,7 +181,7 @@ public class VB extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
-        Hw s= (Hw) model.getValueAt(selectedRowIndex, 0);
+        allPerson s= (allPerson) model.getValueAt(selectedRowIndex, 0);
         BankName.setText(String.valueOf(s.getBankName()));
         SSN.setText(String.valueOf(s.getSSN()));
         TaxId.setText(String.valueOf(s.getTaxId()));
@@ -198,7 +198,7 @@ public class VB extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
-        Hw s= (Hw) model.getValueAt(selectedRowIndex, 0);
+        allPerson s= (allPerson) model.getValueAt(selectedRowIndex, 0);
         
         bankaccount.deleteB(s);
         
@@ -229,7 +229,7 @@ public class VB extends javax.swing.JPanel {
         DefaultTableModel model=  (DefaultTableModel) jTable1.getModel();
          model.setRowCount(0);
          
-         for (Hw vs : bankaccount.getB()){
+         for (allPerson vs : bankaccount.getB()){
              Object[] row= new Object[5];
              row[0]=vs.getBankName();
              row[1]=vs.getBranch();

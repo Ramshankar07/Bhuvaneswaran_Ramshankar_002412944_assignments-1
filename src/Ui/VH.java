@@ -4,8 +4,8 @@
  */
 package Ui;
 
-import homework.Hw;
 import homework.ViewH;
+import homework.allPerson;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -229,7 +229,7 @@ public class VH extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
-        Hw s= (Hw) model.getValueAt(selectedRowIndex, 0);
+        allPerson s= (allPerson) model.getValueAt(selectedRowIndex, 0);
         City.setText(String.valueOf(s.getCity()));
         StreetName.setText(String.valueOf(s.getStreetName()));
         PIN.setText(String.valueOf(s.getPIN()));
@@ -245,7 +245,7 @@ public class VH extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
-        Hw s= (Hw) model.getValueAt(selectedRowIndex, 0);
+        ViewH s= (ViewH) model.getValueAt(selectedRowIndex, 0);
         
         homeaddress.deleteH(s);
         
@@ -276,7 +276,7 @@ public class VH extends javax.swing.JPanel {
     DefaultTableModel model=  (DefaultTableModel) jTable1.getModel();
          model.setRowCount(0);
          
-         for (Hw vs : homeaddress.getH()){
+         for (allPerson vs : homeaddress.getH()){
              Object[] row= new Object[5];
              row[0]=vs.getStreetName();
              row[1]=vs.getUnit();

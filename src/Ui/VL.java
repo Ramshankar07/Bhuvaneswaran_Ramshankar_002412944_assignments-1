@@ -4,7 +4,7 @@
  */
 package Ui;
 
-import homework.Hw;
+import homework.allPerson;
 import homework.ViewL;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -231,7 +231,7 @@ public class VL extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
-        Hw s= (Hw) model.getValueAt(selectedRowIndex, 0);
+        allPerson s= (allPerson) model.getValueAt(selectedRowIndex, 0);
         LCity.setText(String.valueOf(s.getLCity()));
         LStreetName.setText(String.valueOf(s.getLStreetName()));
         LPIN.setText(String.valueOf(s.getLPIN()));
@@ -247,7 +247,7 @@ public class VL extends javax.swing.JPanel {
             return;
         }
         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
-        Hw s= (Hw) model.getValueAt(selectedRowIndex, 0);
+        allPerson s= (allPerson) model.getValueAt(selectedRowIndex, 0);
         
         localaddress.deleteL(s);
         
@@ -278,7 +278,7 @@ public class VL extends javax.swing.JPanel {
  DefaultTableModel model=  (DefaultTableModel) jTable1.getModel();
          model.setRowCount(0);
          
-         for (Hw vs : localaddress.getL()){
+         for (allPerson vs : localaddress.getL()){
              Object[] row= new Object[5];
              row[0]=vs.getLStreetName();
              row[1]=vs.getLUnit();

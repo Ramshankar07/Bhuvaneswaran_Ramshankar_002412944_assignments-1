@@ -39,22 +39,22 @@
                                   <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jLabel2" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Age" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="Sex" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="BG" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="FName" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                          <Component id="LName" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                                          <Component id="FName" min="-2" pref="132" max="-2" attributes="0"/>
+                                          <Component id="LName" min="-2" pref="132" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="BtnDelete" min="-2" max="-2" attributes="0"/>
                                           <Component id="BtnView" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="Age" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Component id="Sex" min="-2" pref="132" max="-2" attributes="0"/>
+                                  <Component id="BG" min="-2" pref="132" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jScrollPane1" min="-2" pref="375" max="-2" attributes="0"/>
@@ -68,38 +68,38 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="17" max="32767" attributes="0"/>
+              <EmptySpace pref="16" max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="88" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="FName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BtnView" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="FName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="LName" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BtnDelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="LName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Age" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Age" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Sex" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Sex" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BG" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BG" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <EmptySpace pref="19" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -185,31 +185,6 @@
         <Property name="text" type="java.lang.String" value="Blood Group:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="FName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FNameActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="LName">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LNameActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="Age">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AgeActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="Sex">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SexActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JTextField" name="BG">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BGActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="4"/>
@@ -240,6 +215,16 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnDeleteActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="FName">
+    </Component>
+    <Component class="javax.swing.JTextField" name="LName">
+    </Component>
+    <Component class="javax.swing.JTextField" name="Age">
+    </Component>
+    <Component class="javax.swing.JTextField" name="Sex">
+    </Component>
+    <Component class="javax.swing.JTextField" name="BG">
     </Component>
   </SubComponents>
 </Form>

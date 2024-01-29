@@ -11,25 +11,25 @@ import java.util.ArrayList;
  * @author Ram
  */
 public class ViewL {
-    private ArrayList<Hw> localaddress;
+    private ArrayList<allPerson> localaddress;
     public ViewL(){
         this.localaddress = new ArrayList<>();
     }
 
-    public ArrayList<Hw> getL() {
+    public ArrayList<allPerson> getL() {
         return localaddress;
     }
 
-    public void setL(ArrayList<Hw> deets) {
+    public void setL(ArrayList<allPerson> deets) {
         this.localaddress = deets;
     }
-    public Hw addNewL(){
-        Hw newdeets = new Hw();
+    public allPerson addNewL(){
+        allPerson newdeets = new allPerson();
         localaddress.add(newdeets);
         return newdeets;
         
     }
-    public void deleteL(Hw d){
+    public void deleteL(allPerson d){
         localaddress.remove(d);
     }
     

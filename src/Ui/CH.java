@@ -4,7 +4,7 @@
  */
 package Ui;
 
-import homework.Hw;
+import homework.allPerson;
 import homework.ViewH;
 import javax.swing.JOptionPane;
 
@@ -18,9 +18,14 @@ public class CH extends javax.swing.JPanel {
      * Creates new form CH
      */
     ViewH homeaddress;
+
+    /**
+     *
+     * @param homeaddress
+     */
     public CH(ViewH homeaddress) {
         initComponents();
-        this.homeaddress = new ViewH();
+        this.homeaddress = homeaddress;
 
     }
 
@@ -187,10 +192,10 @@ public class CH extends javax.swing.JPanel {
           String streetname=StreetName.getText();
         String door=DoorNo.getText();
         String state=State.getText();
-        int pin=Integer.parseInt(PIN.getText());
+        String pin=PIN.getText();
         String city=City.getText();
         
-        Hw d = homeaddress.addNewH();
+        allPerson d = homeaddress.addNewH();
         d.setStreetName(streetname);
         d.setState(state);
         d.setUnit(door);

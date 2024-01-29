@@ -4,7 +4,7 @@
  */
 package Ui;
 
-import homework.Hw;
+import homework.allPerson;
 import homework.ViewB;
 import javax.swing.JOptionPane;
 
@@ -20,7 +20,7 @@ public class CB extends javax.swing.JPanel {
     ViewB bankaccount;
     public CB(ViewB bankaccount) {
         initComponents();
-        this.bankaccount = new ViewB();
+        this.bankaccount = bankaccount;
 
     }
 
@@ -138,10 +138,10 @@ public class CB extends javax.swing.JPanel {
           String bankname=BankName.getText();
         String branch=Branch.getText();
         String taxid=TaxId.getText();
-        int ssn=Integer.parseInt(SSN.getText());
+        String ssn=SSN.getText();
         String accounttype=AccountType.getText();
         
-        Hw d = bankaccount.addNewB();
+        allPerson d = bankaccount.addNewB();
         d.setBankName(bankname);
         d.setBranch(branch);
         d.setTaxId(taxid);

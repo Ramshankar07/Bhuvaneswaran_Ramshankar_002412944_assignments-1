@@ -7,22 +7,22 @@ package homework;
  *
  * @author Ram
  */
-public class Hw {
+public class allPerson {
     
     
     private String FirstName;
     private String LastName;
-    private int Age;
+    private String Age;
     private String Sex;
     private String BloodGroup;
     private String BankName;
     private String Branch;
-    private int SSN;
+    private String SSN;
     private String TaxId;
     private String AccountType;
     private String StreetName;
     private String Unit;
-    private int PIN;
+    private String PIN;
     private String State;
     private String City;
     private String LStreetName;
@@ -44,11 +44,11 @@ public class Hw {
         this.LastName = LastName;
     }
 
-    public int getAge() {
+    public String getAge() {
         return Age;
     }
 
-    public void setAge(int Age) {
+    public void setAge(String Age) {
         this.Age = Age;
     }
 
@@ -84,11 +84,11 @@ public class Hw {
         this.Branch = Branch;
     }
 
-    public int getSSN() {
+    public String getSSN() {
         return SSN;
     }
 
-    public void setSSN(int SSN) {
+    public void setSSN(String SSN) {
         this.SSN = SSN;
     }
 
@@ -124,11 +124,11 @@ public class Hw {
         this.Unit = Unit;
     }
 
-    public int getPIN() {
+    public String getPIN() {
         return PIN;
     }
 
-    public void setPIN(int PIN) {
+    public void setPIN(String PIN) {
         this.PIN = PIN;
     }
 
@@ -164,11 +164,11 @@ public class Hw {
         this.LUnit = LUnit;
     }
 
-    public int getLPIN() {
+    public String getLPIN() {
         return LPIN;
     }
 
-    public void setLPIN(int LPIN) {
+    public void setLPIN(String LPIN) {
         this.LPIN = LPIN;
     }
 
@@ -187,12 +187,13 @@ public class Hw {
     public void setLCity(String LCity) {
         this.LCity = LCity;
     }
-    private int LPIN;
+    private String LPIN;
     private String LState;
     private String LCity;
-    
+
+ 
+
     /**
-     * @param args the command line arguments
      */
  
     

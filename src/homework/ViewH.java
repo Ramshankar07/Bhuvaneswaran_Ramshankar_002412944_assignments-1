@@ -11,26 +11,31 @@ import java.util.ArrayList;
  * @author Ram
  */
 public class ViewH {
-    private ArrayList<Hw> homeaddress;
+    private ArrayList<allPerson> homeaddress;
     public ViewH(){
         this.homeaddress = new ArrayList<>();
     }
 
-    public ArrayList<Hw> getH() {
+    public ArrayList<allPerson> getH() {
         return homeaddress;
     }
 
-    public void setH(ArrayList<Hw> deets) {
+    public void setH(ArrayList<allPerson> deets) {
         this.homeaddress = deets;
     }
-    public Hw addNewH(){
-        Hw newdeets = new Hw();
+    public allPerson addNewH(){
+        allPerson newdeets = new allPerson();
         homeaddress.add(newdeets);
         return newdeets;
         
     }
-    public void deleteH(Hw d){
-        homeaddress.remove(d);
+    public void deleteH(allPerson d){
+        
+    }
+
+    public void deleteH(ViewH s) {
+        homeaddress.remove(s);
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
