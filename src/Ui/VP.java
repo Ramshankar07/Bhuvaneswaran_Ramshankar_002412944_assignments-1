@@ -234,7 +234,7 @@ public class VP extends javax.swing.JPanel {
          
          for (allPerson vs : person.getP()){
              Object[] row= new Object[5];
-             row[0]=vs.getFirstName();
+             row[0]=vs;
              row[1]=vs.getLastName();
              row[2]=vs.getAge();
              row[3]=vs.getSex();

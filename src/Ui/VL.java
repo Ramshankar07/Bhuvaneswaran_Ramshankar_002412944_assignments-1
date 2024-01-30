@@ -280,7 +280,7 @@ public class VL extends javax.swing.JPanel {
          
          for (allPerson vs : localaddress.getL()){
              Object[] row= new Object[5];
-             row[0]=vs.getLStreetName();
+             row[0]=vs;
              row[1]=vs.getLUnit();
              row[2]=vs.getLPIN();
              row[3]=vs.getLCity();

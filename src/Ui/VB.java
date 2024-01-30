@@ -231,7 +231,7 @@ public class VB extends javax.swing.JPanel {
          
          for (allPerson vs : bankaccount.getB()){
              Object[] row= new Object[5];
-             row[0]=vs.getBankName();
+             row[0]=vs;
              row[1]=vs.getBranch();
              row[2]=vs.getSSN();
              row[3]=vs.getTaxId();

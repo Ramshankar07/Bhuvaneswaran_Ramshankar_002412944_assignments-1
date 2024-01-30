@@ -278,7 +278,7 @@ public class VH extends javax.swing.JPanel {
          
          for (allPerson vs : homeaddress.getH()){
              Object[] row= new Object[5];
-             row[0]=vs.getStreetName();
+             row[0]=vs;
              row[1]=vs.getUnit();
              row[2]=vs.getPIN();
              row[3]=vs.getCity();
