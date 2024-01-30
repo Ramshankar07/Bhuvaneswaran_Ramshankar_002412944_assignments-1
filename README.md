@@ -1,6 +1,6 @@
 File Structure:
 - Homework
-    - Hw.java
+    - allPerson.java
     - ViewL (List of Local Address)
     - ViewH (List of Home Address)
     - ViewP (List of Person )
