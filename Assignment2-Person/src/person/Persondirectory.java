@@ -40,31 +40,16 @@ public class Persondirectory {
     }
     public Boolean searchPerson(String P){
         for (Person p: Personlist){
-            if (p.getFirstName().equalsIgnoreCase(P)|| p.getLastName().equalsIgnoreCase(P)){
+            if (p.getFirstName().equalsIgnoreCase(P)|| p.getLastName().equalsIgnoreCase(P) || p.getHomeaddress().getStreetName().equalsIgnoreCase(P)|| p.getWorkaddress().getStreetName().equalsIgnoreCase(P)){
                 return true;
             }
         }
         return false;
     }
-    public Boolean searchaddressPerson(String P){
-        for (Person p: Personlist){
-            if (p.getHomeaddress().getStreetName().equalsIgnoreCase(P)|| p.getWorkaddress().getStreetName().equalsIgnoreCase(P)){
-                return true;
-            }
-        }
-        return false;
-    }
+   
     public Person searchgetPerson(String P){
         for (Person p: Personlist){
-            if (p.getFirstName().equalsIgnoreCase(P)|| p.getLastName().equalsIgnoreCase(P)){
-                return p;
-            }
-        }
-        return null;
-    }
-    public Person searchgetaddressPerson(String P){
-        for (Person p: Personlist){
-            if (p.getHomeaddress().getStreetName().equalsIgnoreCase(P)|| p.getWorkaddress().getStreetName().equalsIgnoreCase(P)){
+            if (p.getFirstName().equalsIgnoreCase(P)|| p.getLastName().equalsIgnoreCase(P)|| p.getHomeaddress().getStreetName().equalsIgnoreCase(P)|| p.getWorkaddress().getStreetName().equalsIgnoreCase(P)){
                 return p;
             }
         }
