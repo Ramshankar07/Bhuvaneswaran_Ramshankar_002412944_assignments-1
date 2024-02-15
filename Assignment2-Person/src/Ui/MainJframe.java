@@ -129,13 +129,7 @@ public class MainJframe extends javax.swing.JFrame {
             Right.add("viewpanel",pan);
             CardLayout layout = (CardLayout) Right.getLayout();
             layout.next(Right);}
-            else if (person.searchaddressPerson(result)){
-                Person r = person.searchgetPerson(result);
-                viewpanel pan= new viewpanel(Right, r);
-            Right.add("viewpanel",pan);
-            CardLayout layout = (CardLayout) Right.getLayout();
-            layout.next(Right);
-            }
+         
             else{
                                JOptionPane.showMessageDialog(null,"Person doesn't exist", "Information", JOptionPane.INFORMATION_MESSAGE);            
 
