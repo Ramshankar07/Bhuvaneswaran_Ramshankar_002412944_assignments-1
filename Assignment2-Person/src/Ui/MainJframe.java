@@ -22,6 +22,7 @@ public class MainJframe extends javax.swing.JFrame {
     public MainJframe() {
         initComponents();
         this.person= new Persondirectory();
+        prepopulate();
     }
 
     /**
@@ -195,4 +196,64 @@ public class MainJframe extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
+    
+    private void prepopulate() {
+       
+        preppop("New York", "NY", "5th Avenue", "1001", "10001",
+                                     "Los Angeles", "CA", "Sunset Boulevard", "101", "90001",
+                                     "John", "Doe", "123456789", "1234567");
+        
+      
+        preppop("Chicago", "IL", "Lake Shore Drive", "202", "60001",
+                                     "Houston", "TX", "Main Street", "303", "77001",
+                                     "Jane", "Smith", "987654321", "9876543");
+        
+    
+        preppop("San Francisco", "CA", "Market Street", "404", "94101",
+                                     "Miami", "FL", "Ocean Drive", "505", "33101",
+                                     "Alice", "Johnson", "123987654", "1239876");
+        
+        preppop("Seattle", "WA", "Pine Street", "606", "98101",
+                                     "Atlanta", "GA", "Peachtree Street", "707", "30301",
+                                     "Bob", "Williams", "45689123", "4567891");
+        
+        preppop("Boston", "MA", "Commonwealth Avenue", "808", "02101",
+                                     "Denver", "CO", "Larimer Square", "909", "80201",
+                                     "Carol", "Davis", "789123456", "7891234");        
+//        Object[] r1= {"ram","shankar","chennai","600028","bnglr","20000"};
+//        Object[] r2= {"nick","j","newyork","04028","qubec","42522"};
+//        Object[] r3= {"carl","max","tempe","60028","florida","23500"};
+//        Object[] r4= {"srunith","sai","kochi","60338","bangkok","7377"};
+//        Object[] r5= {"ninja","hattori","beijing","82224","seattle","94880"};
+//        model.addRow(r1);
+//        model.addRow(r2);
+//        model.addRow(r3);
+//        model.addRow(r4);
+//        model.addRow(r5);
+
+    }
+
+    private void preppop(String hcity, String hstate, String hsn, String hunit, String hzip,String wcity, String wstate, String wsn, String wunit, String wzip,String Fn, String Ln, String ssn, String license)
+    {
+           Address address = new Address();
+           Address address1 = new Address();
+           Person Persondirectory = person.addPerson();
+           
+           address.setCity(hcity);
+           address.setState(hstate);
+           address.setStreetName(hsn);
+           address.setUnit(hunit);
+           address.setZipcode(Integer.parseInt(hzip));
+           address1.setCity(wcity);
+           address1.setState(wstate);
+           address1.setStreetName(wsn);
+           address1.setUnit(wunit);
+           address1.setZipcode(Integer.parseInt(wzip));
+           
+           Persondirectory.setFirstName(Fn);
+           Persondirectory.setLastName(Ln);
+           Persondirectory.setSSN(Integer.parseInt(ssn));
+           Persondirectory.setLicense(Integer.parseInt(license));
+           Persondirectory.setHomeaddress(address);
+           Persondirectory.setWorkaddress(address1);    }
 }
