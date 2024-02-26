@@ -10,6 +10,8 @@ import info5100.university.example.CourseCatalog.CourseCatalog;
 import info5100.university.example.CourseSchedule.CourseLoad;
 import info5100.university.example.CourseSchedule.CourseOffer;
 import info5100.university.example.CourseSchedule.CourseSchedule;
+import info5100.university.example.CourseSchedule.Seat;
+import info5100.university.example.CourseSchedule.SeatAssignment;
 import info5100.university.example.Department.Department;
 import info5100.university.example.Persona.Person;
 import info5100.university.example.Persona.PersonDirectory;
@@ -37,10 +39,11 @@ public class Info5001UniversityExample {
         CourseCatalog coursecatalog = department.getCourseCatalog();
         
         Course course = coursecatalog.newCourse("app eng", "info 5100", 4);
-        coursecatalog.newCourse("Web Development", "info 6105", 4);
-        coursecatalog.newCourse("UIUX", "info 6305", 4);
         coursecatalog.newCourse("Cloud Development", "info 7105", 4);
         coursecatalog.newCourse("Linux administration", "info 8105", 4);
+        coursecatalog.newCourse("Web Development", "info 6105", 4);
+        coursecatalog.newCourse("UIUX", "info 6305", 4);
+ 
         
         
         CourseSchedule courseschedule = department.newCourseSchedule("Fall2020");
@@ -57,11 +60,11 @@ public class Info5001UniversityExample {
         courseload.newSeatAssignment(courseoffer); //register student in class
         
         int total = department.calculateRevenuesBySemester("Fall2020");
-        System.out.print("Total: " + total);
-        Person p1 = pd.newPerson("Amuthan");
-        Person p2 = pd.newPerson("KalBugrara");
-        Person p3 = pd.newPerson("Vishalchawla");
-        Person p4 = pd.newPerson("we4567io");
+        // System.out.print("Total: " + total); 
+        Person p1 = pd.newPerson("peraar");
+        Person p2 = pd.newPerson("Kal");
+        Person p3 = pd.newPerson("Nik Brown");
+        Person p4 = pd.newPerson("vishal");
         FacultyDirectory fd = department.getFacultydirectory();
         fd.newFacultyProfile(p2);
         fd.newFacultyProfile(p3);
@@ -72,12 +75,16 @@ public class Info5001UniversityExample {
         //
 
         while (true) {
-        System.out.println("Select an option:");
+        System.out.println("Main menu");
+        
+        System.out.println("==========================");
         System.out.println("1. Manage Add Course and browse course Catalog");
         System.out.println("2. Manage the  new semester schedule by adding courses and assigning teachers");
         System.out.println("3. Register Student for a Course");
-        System.out.println("4.Display enrolled courses");
+        System.out.println("4. Display enrolled courses");
         System.out.println("5.Exit");
+        
+        System.out.println("==========================");
         System.out.println("Please select an option");
       int option = scanner.nextInt();
        
@@ -87,7 +94,7 @@ public class Info5001UniversityExample {
         switch(option) {
             case 1:
 
-                System.out.println("press 1 for add course and press 2 for browse course");
+                System.out.println("press {1} for add course and press {2} for browse course");
                 int option1 =scanner.nextInt();
                 switch (option1) {
                     case 1:
@@ -96,7 +103,7 @@ public class Info5001UniversityExample {
                         
                         break;
                     case 2:
-                        System.out.println("total no of courses to be added");
+                        System.out.println("Total no of courses to be added");
                         
                         browseCourse(coursecatalog);
 
@@ -105,9 +112,6 @@ public class Info5001UniversityExample {
                         System.out.println("Invalid option selected.");
                         break;
                 }
-
-
-
 
                 break;
             case 2:
@@ -122,37 +126,20 @@ public class Info5001UniversityExample {
                 break;
             case 4:
                 System.out.println("display enrolled courses");  
+                displayRegisteredCourses(scanner, department, coursecatalog);
                 break; 
-            case 5:
-                System.out.println("display enrolled courses");  
+            case 5: 
+            printSemesterCourseReport(scanner, department); 
+                break;
+            case 6:
+                System.out.println("Exiting...");  
                 return;      
             default:
                 System.out.println("Invalid option selected.");
         }
     }
     }
-    // private static void printCourseOfferDetails() {
-    //     System.out.println("Course Number: " + getCourseNumber());
-    //     System.out.println("Course Name: " + getCourseName());
-    //     System.out.println("Credit Hours: " + getCreditHours());
-        
-    //     FacultyProfile faculty = getFacultyProfile();
-    //     if (faculty != null) {
-    //         System.out.println("Faculty Assigned:");
-    //         System.out.println("Name: " + faculty.getPerson().getName()); // Assuming Person class has getName() method
-    //         // You can print other relevant information about the faculty as well
-    //     } else {
-    //         System.out.println("Faculty: Not Assigned");
-    //     }
-        
-    //     int totalRevenues = getTotalCourseRevenues();
-    //     System.out.println("Total Course Revenues: $" + totalRevenues);
-        
-    //     System.out.println("Available Seats: " + (seatlist.size() - cl.getRegisteredStudentsCount()));
-    //     // Assuming cl.getRegisteredStudentsCount() returns the count of registered students for this course offer
-        
-    //     System.out.println("--------------");
-    // }
+   
     public static void browseCourse(CourseCatalog coursecatalog) {
         // Add logic for handling option 2
         ArrayList<Course> courseList = coursecatalog.getCourseList();
@@ -178,9 +165,44 @@ public class Info5001UniversityExample {
         Course newCourse = coursecatalog.newCourse(cname, cnumber, credits);
         System.out.println("Course Added");
     }
+    private static void displayRegisteredCourses(Scanner scanner, Department department,CourseCatalog coursecatalog) {
+    System.out.print("Enter student ID: ");
+    String studentId = scanner.next();
+    System.out.print("Enter semester (e.g., 'Fall2020'): ");
+    String semester = scanner.next();
+    
+    if (studentId == null) {
+        System.out.println("Invalid student profile.");
+        return;
+    }
+    else{
+        StudentDirectory sd = department.getStudentDirectory();
+        StudentProfile student = sd.findStudent(studentId);
+
+        // CourseSchedule cs = department.getCourseSchedule(semester);
+  
+    // Assuming the StudentProfile class has a method to get all semesters with course loads
+     CourseLoad courseLoads = student.getCurrentCourseLoad();
+        if (courseLoads == null) {
+        System.out.println("No courses registered.");
+        return;
+        }
+
+    System.out.println("Registered Courses for semester: " + courseLoads.getSemester());
+    ArrayList<SeatAssignment> seatAssignments = courseLoads.getSeatAssignments();
+
+    if (seatAssignments.isEmpty()) {
+        System.out.println("No courses registered for this semester.");
+    } else {
+        for (SeatAssignment sa : seatAssignments) {
+            CourseOffer co = sa.getCourseOffer(); 
+            System.out.println(" - " + co.getCourseNumber() );
+        }
+    }}
+}
 
     private static CourseSchedule addCourseSchedule(Department dept,CourseCatalog coursecatalog ){
-        System.out.println("new Course");
+        System.out.println("Adding New Course");
         System.out.println("For which semester do you want to add course schedule");
         Scanner scanner1 = new Scanner(System.in);
         String semName = scanner1.nextLine();
@@ -305,7 +327,47 @@ private static void registerStudentForCourse(Scanner scanner, Department departm
     
 
 
-
+    public static void printSemesterCourseReport(Scanner scanner, Department department) {
+        System.out.print("Enter the semester for the report: ");
+        String semester = scanner.next();
+        CourseSchedule cs = department.getCourseSchedule(semester);
+    
+        if (cs == null) {
+            System.out.println("Semester not found.");
+            return;
+        }
+    
+        System.out.println("Course Report for " + semester);
+        ArrayList<CourseOffer> courseOffers = cs.getSchedule();
+        for (CourseOffer co : courseOffers) {
+            System.out.println("Course: " + co.getCourseNumber() + " - " + co.getSubjectCourse());
+            System.out.println("Teacher: " + (co.getFacultyProfile() != null ? co.getFacultyProfile().getPerson().getPersonId() : "No teacher assigned"));
+    
+            ArrayList<Seat> seatList = co.getSeatlist();
+    
+            if (seatList.isEmpty()) {
+                System.out.println("No students enrolled.");
+                continue;
+            }
+    
+            for (Seat seat : seatList) {
+                if (seat.isOccupied()) {
+                    SeatAssignment sa = seat.getSeatassignment();
+                    CourseLoad courseLoad = sa.getCourseload();
+                    StudentProfile student = courseLoad.getStudentProfile(); // Assuming you've added getStudentProfile()
+                    // Now you have the StudentProfile, you can print it out or add it to a list
+                    System.out.println("Student: " + student.getPerson().getPersonId()); // Assuming getName() gets the student's name
+                }
+            }
+    
+            // Calculating average GPA and total tuition for the course - this would require additional methods or calculations
+            // Assuming methods exist to calculate GPA and tuition based on SeatAssignments
+        }
+    
+        // The total revenue part seems to be correctly implemented in your given method
+        System.out.println("Total Revenue: " + cs.calculateTotalRevenues());
+    }
+    
     
 
 
