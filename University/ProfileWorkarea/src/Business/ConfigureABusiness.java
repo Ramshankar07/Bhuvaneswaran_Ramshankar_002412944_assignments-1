@@ -75,7 +75,7 @@ class ConfigureABusiness {
         Person f5 = persondirectory.newPerson("Gail"); //we use this as customer
         Person s1 = persondirectory.newPerson("Jim");
         Person s2 = persondirectory.newPerson("Sophie");
-        Person s3 = persondirectory.newPerson("Anastasia");
+        Person s3 = persondirectory.newPerson("Tom");
         Person s5 = persondirectory.newPerson("Ram");
         Person s4 = persondirectory.newPerson("Rex");
         
@@ -101,21 +101,24 @@ class ConfigureABusiness {
         StudentProfile st2= sd.newStudentProfile(s2);
         StudentProfile st3= sd.newStudentProfile(s3);
         StudentProfile st4= sd.newStudentProfile(s4);
+        StudentProfile st5= sd.newStudentProfile(s5);
         
    
 // Create User accounts that link to specific profiles
 
         UserAccountDirectory uadirectory = d.getUseraccountdirectory();
-        UserAccount ua3 = uadirectory.newUserAccount(emp0, "admin", "XXXX"); /// order products for one of the customers and performed by a sales person
-        UserAccount ua1 = uadirectory.newUserAccount(emp1, "Sec", "Sec");
-        UserAccount ua2 = uadirectory.newUserAccount(emp2, "Dean", "Dean");
-        UserAccount ua4 = uadirectory.newUserAccount(emp3, "Kal", "Kal");
-        UserAccount ua5 = uadirectory.newUserAccount(emp4, "Nick", "Nick"); /// order products for one of the customers and performed by a sales person
-        UserAccount ua6 = uadirectory.newUserAccount(emp5, "Sam", "Sam");
-        UserAccount ua7 = uadirectory.newUserAccount(emp6, "Zack", "Zack");
-        UserAccount ua8 = uadirectory.newUserAccount(emp7, "Gail", "Gail");
-        UserAccount ua9= uadirectory.newUserAccount(st1, "Jim", "Jim");
-        UserAccount ua10= uadirectory.newUserAccount(st2, "Sophie", "Sophie");
+        UserAccount ua3 = uadirectory.newUserAccount(emp0, "admin", "..."); /// order products for one of the customers and performed by a sales person
+        UserAccount ua1 = uadirectory.newUserAccount(emp1, "Sec", "...");
+        UserAccount ua2 = uadirectory.newUserAccount(emp2, "Dean", "...");
+        UserAccount ua4 = uadirectory.newUserAccount(emp3, "Kal", "...");
+        UserAccount ua5 = uadirectory.newUserAccount(emp4, "Nick", "..."); /// order products for one of the customers and performed by a sales person
+        UserAccount ua6 = uadirectory.newUserAccount(emp5, "Sam", "...");
+        UserAccount ua7 = uadirectory.newUserAccount(emp6, "Zack", "...");
+        UserAccount ua8 = uadirectory.newUserAccount(emp7, "Gail", "...");
+        UserAccount ua9= uadirectory.newUserAccount(st1, "Jim", "...");
+        UserAccount ua10= uadirectory.newUserAccount(st2, "Sophie", "...");
+        UserAccount ua11= uadirectory.newUserAccount(st4, "Rex", "...");
+        UserAccount ua12= uadirectory.newUserAccount(st3,"Tom" , "...");
         
         
         c1.AssignAsTeacher(emp3);

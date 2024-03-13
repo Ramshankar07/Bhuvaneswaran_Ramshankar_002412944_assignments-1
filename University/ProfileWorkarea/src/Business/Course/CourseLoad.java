@@ -21,17 +21,15 @@ public class CourseLoad {
     public StudentProfile getStudentProfile() {
         return studentProfile;
     }
-    public void setStudentProfile(StudentProfile studentProfile) {
-        this.studentProfile = studentProfile;
-    }
     public String getSemester() {
         return semester;
     }
     ArrayList<SeatAssignment> seatassignments;
     
-    public CourseLoad(String s){
+    public CourseLoad(String s,StudentProfile ss){
         seatassignments = new ArrayList();
         semester = s;
+        this.studentProfile=ss;
     }
     public SeatAssignment newSeatAssignment(CourseOffer co){
         

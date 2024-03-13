@@ -216,24 +216,31 @@ public class StudRegJPanel extends javax.swing.JPanel {
         else{
         Random random= new Random();
         String  cn= (String)jTable1.getValueAt(selectedRow,2);
-        System.out.println(cn);
+//        System.out.println(cn);
         Course cs = business.getCourseCatalog().getCourseByNumber(cn);
+//        System.out.println(cs);
         String te=  (String) term1.getSelectedItem();
+//        System.out.println(te);
         if(cs==null){ JOptionPane.showMessageDialog(null, "Please select a row from table first", "Warning", JOptionPane.WARNING_MESSAGE);}
          
         CourseSchedule courseschedule = business.getCourseSchedule(te);
         CourseLoad cl= spp.newCourseLoad(te);
+//        System.out.println(cl);
         CourseOffer aa= courseschedule.getCourseOfferByNumber(cn);
-//        for (CourseOffer ua : courseschedule.getSchedule()) {
-//            if(ua.getCourseNumber().equals(cn)){
+        for (CourseOffer ua : courseschedule.getSchedule()) {
+            if(ua.getCourseNumber().equals(cs.getCOurseNumber())){
                 SeatAssignment a= cl.newSeatAssignment(aa);
                 cl.registerStudent(a);
-                a.setGrade(random.nextInt(101));
-                JOptionPane.showMessageDialog(null, "Course Enrolled", "Warning", JOptionPane.WARNING_MESSAGE);
+//                System.out.println(cl);
+                int ran= random.nextInt(101);
+                System.out.println(ran);
+                a.setGrade(ran);
+                
+                JOptionPane.showMessageDialog(null, "Course Enrolled", "Info", JOptionPane.INFORMATION_MESSAGE);
 
-//            }
+            }
         
-//        }
+        }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

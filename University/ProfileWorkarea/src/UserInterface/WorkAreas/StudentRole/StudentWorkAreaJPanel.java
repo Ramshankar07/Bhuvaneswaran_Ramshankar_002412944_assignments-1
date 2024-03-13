@@ -53,10 +53,8 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         BtnCoursework = new javax.swing.JButton();
-        BtnGraduation = new javax.swing.JButton();
         Btnregistration = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        BtnTranscript = new javax.swing.JButton();
 
         setForeground(new java.awt.Color(51, 51, 51));
 
@@ -71,20 +69,6 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         BtnCoursework.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnCourseworkIdentifyResourceAssetsActionPerformed(evt);
-            }
-        });
-
-        BtnGraduation.setBackground(new java.awt.Color(102, 153, 255));
-        BtnGraduation.setFont(getFont());
-        BtnGraduation.setForeground(new java.awt.Color(255, 255, 255));
-        BtnGraduation.setText("Graduation Audit");
-        BtnGraduation.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        BtnGraduation.setMaximumSize(new java.awt.Dimension(200, 40));
-        BtnGraduation.setMinimumSize(new java.awt.Dimension(20, 20));
-        BtnGraduation.setPreferredSize(new java.awt.Dimension(240, 25));
-        BtnGraduation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnGraduationActionPerformed(evt);
             }
         });
 
@@ -105,20 +89,6 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setText("My Student Portal");
 
-        BtnTranscript.setBackground(new java.awt.Color(102, 153, 255));
-        BtnTranscript.setFont(getFont());
-        BtnTranscript.setForeground(new java.awt.Color(255, 255, 255));
-        BtnTranscript.setText("Transcript");
-        BtnTranscript.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        BtnTranscript.setMaximumSize(new java.awt.Dimension(200, 40));
-        BtnTranscript.setMinimumSize(new java.awt.Dimension(20, 20));
-        BtnTranscript.setPreferredSize(new java.awt.Dimension(240, 25));
-        BtnTranscript.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnTranscriptActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -128,13 +98,9 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(BtnTranscript, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(BtnCoursework, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE))
+                        .addComponent(BtnCoursework, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(75, 75, 75)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Btnregistration, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnGraduation, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(Btnregistration, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(145, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -146,11 +112,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnCoursework, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Btnregistration, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnGraduation, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnTranscript, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -165,16 +127,6 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_BtnCourseworkIdentifyResourceAssetsActionPerformed
 
-    private void BtnGraduationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGraduationActionPerformed
-        // TODO add your handling code here:
-
- /*       ManageSalesPersonOrders iet = new ManageSalesPersonOrders(business, CardSequencePanel);
-
-        CardSequencePanel.add("FindResourceAsset", iet);
-        ((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
-*/
-    }//GEN-LAST:event_BtnGraduationActionPerformed
-
     private void BtnregistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnregistrationActionPerformed
         // TODO add your handling code here:
 
@@ -184,15 +136,9 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         ((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
 }//GEN-LAST:event_BtnregistrationActionPerformed
 
-    private void BtnTranscriptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTranscriptActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnTranscriptActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnCoursework;
-    private javax.swing.JButton BtnGraduation;
-    private javax.swing.JButton BtnTranscript;
     private javax.swing.JButton Btnregistration;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

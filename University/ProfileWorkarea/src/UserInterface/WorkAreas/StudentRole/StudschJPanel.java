@@ -45,7 +45,7 @@ public void refreshTable() {
         for (i = rc - 1; i >= 0; i--) {
             ((DefaultTableModel) jTable2.getModel()).removeRow(i);
         }
-        String te=  (String) term1.getSelectedItem();
+         String te=  (String) term1.getSelectedItem();
          
         CourseSchedule courseschedule = business.getCourseSchedule(te);
 
@@ -60,7 +60,9 @@ public void refreshTable() {
             if(ss.isOccupied()){
                 SeatAssignment sass= ss.getSeatassignment();
                 CourseLoad b=sass.getCourseload();
+                System.out.println(b);
                 StudentProfile lk=b.getStudentProfile();
+                System.out.println(spp);
                 if(lk.getPerson().getPersonId().equals(spp.getPerson().getPersonId())){
             Object[] row = new Object[5];
             row[0] = p++;

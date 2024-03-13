@@ -5,20 +5,14 @@
         <group>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/StudentRole/StudschJPanel.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/StudentRole/StudentWorkAreaJPanel.java</file>
+            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/FacultyRole/FacultyWorkAreaJPanel.java</file>
+            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/CourseCatalogjpanel.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/SemReport.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/StudentRole/Transcriptstud.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/Students.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/StudentRole/StudRegJPanel.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/AdminRoleWorkAreaJPanel.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/FacultyRole/Addcourse.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/Business/Course/SeatAssignment.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/CourseCatalogjpanel.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/FacultyRole/FacultyWorkAreaJPanel.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/Faculty.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/realcoursecatalog.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/CreatePersonPanel.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/CourseschJPanel.java</file>
-            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/Createcoursecatalogpanel.java</file>
+            <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/Business/Course/CourseLoad.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/AdminRole/ManagePersonnelWorkResp/AdministerPersonJPanel.java</file>
             <file>file:/C:/Users/pikal/Documents/NetBeansProjects/University/ProfileWorkarea/src/UserInterface/WorkAreas/FacultyRole/Managecourse.java</file>
         </group>

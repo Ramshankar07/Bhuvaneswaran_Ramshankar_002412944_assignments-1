@@ -17,6 +17,7 @@ import Business.Profiles.StudentProfile;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+//import javax.
 
 /**
  *
@@ -52,6 +53,8 @@ public void refreshTable() {
 //     
 //        CourseCatalog uad = business.getCourseCatalog();
         int p=1;
+        ArrayList<Float> gradesList = new ArrayList<>();
+
 
         for (CourseOffer ua : courseschedule.getSchedule()) {
             ArrayList<Seat>s=ua.getSeatlist();
@@ -59,20 +62,36 @@ public void refreshTable() {
             if(ss.isOccupied()){
                 SeatAssignment sass= ss.getSeatassignment();
                 CourseLoad b=sass.getCourseload();
+                                System.out.println(b);
+                                
                 StudentProfile lk=b.getStudentProfile();
               
-            Object[] row = new Object[5];
+            Object[] row = new Object[6];
             row[0] = p++;
             row[2] = ua.getCourseName(); //complete this..
 //            row[2] = ua.getCourseNumber();
-            
+            gradesList.add(sass.getGrade());
            row[1] = lk.getPerson().getPersonId();    
            row[3]=ua.getFacultyProfile().getPerson().getPersonId();
-           row[4]=sass.GetCourseStudentScore();
+           row[4]=sass.getGrade();
            row[5]="1500";
             ((DefaultTableModel) jTable1.getModel()).addRow(row);
         }}
         }
+        ArrayList<Float> grades = new ArrayList<>();
+        for (float aaa: gradesList){
+        float gpa = (aaa / 100) * 4.0f;
+//        float roundedGPA = Math.round(gpa * 100.0f) / 100.0f;
+            grades.add(gpa);     
+        }
+        float sum = 0;
+        for (float grade : grades) {
+             sum += grade;
+        }
+            float averageGrade = sum / grades.size();
+            String averageGradeString = String.valueOf(averageGrade);
+
+            Semgpa.setText(averageGradeString);
 
 
     }  
@@ -93,7 +112,7 @@ public void refreshTable() {
         jLabel1 = new javax.swing.JLabel();
         lbltitle = new javax.swing.JLabel();
         lblGPA = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Semgpa = new javax.swing.JLabel();
 
         Back.setText("<< Back");
         Back.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +155,7 @@ public void refreshTable() {
         lbltitle.setText("Sem Report");
 
         lblGPA.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblGPA.setText("Your GPA is:");
+        lblGPA.setText("Semester Average GPA is:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -152,24 +171,24 @@ public void refreshTable() {
                         .addComponent(term1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btns)
-                        .addContainerGap(626, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(118, 118, 118)
                                 .addComponent(lbltitle, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 726, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 213, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(Back)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblGPA, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblGPA)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(708, 708, 708))
+                .addComponent(Semgpa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(622, 622, 622))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -188,7 +207,7 @@ public void refreshTable() {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblGPA)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Semgpa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(299, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -202,6 +221,7 @@ public void refreshTable() {
 
     private void btnsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsActionPerformed
         refreshTable();
+        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_btnsActionPerformed
@@ -213,9 +233,9 @@ public void refreshTable() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back;
+    private javax.swing.JLabel Semgpa;
     private javax.swing.JButton btns;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblGPA;
